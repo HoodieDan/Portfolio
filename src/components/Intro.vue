@@ -1,14 +1,16 @@
 <template>
   <div class="container">
-    <p class="green mono">Hi, my name is</p>
-    <h1 class="light-slate">Daniel Obode.</h1>
-    <h1>I build things for the web.</h1>
-    <div class="intro">
-      <p>I’m a <span class="green">Frontend Web Developer</span> specializing in building exceptional 
-       digital experiences. Currently, I’m focused on building skills in
-        various Frontend frameworks.</p>
+    <div class="cont">
+      <p class="green mono">Hi, my name is</p>
+      <h1 class="light-slate">Daniel Obode.</h1>
+      <h1>I build things for the web.</h1>
+      <div class="intro">
+        <p>I’m a <span class="green">Frontend Web Developer</span> specializing in building exceptional 
+        digital experiences. Currently, I’m focused on building skills in
+          various Frontend frameworks.</p>
+      </div>
+      <a href="#AboutMe"><button class="btn mono">I want to know more about you!</button></a>
     </div>
-    <a href="#AboutMe"><button class="btn mono">I want to know more about you!</button></a>
   </div>
 </template>
 
@@ -24,11 +26,11 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  margin: 30px auto 20px 150px;
+.cont {
+  margin-left: 50px;
+  margin-top: 70px;
   position: relative;
-  height: calc(100% - 50px);
-  width: 85%;
+  width: 100%;
 }
 @keyframes enter {
   from {
@@ -79,11 +81,17 @@ h1:nth-of-type(2) {
   background-color: #64ffda;
   color: #0a192f;
 }
-@media (max-width: 820px) {
-  .container {
-    height: 80vh;
-    padding-top: 90px;
-    margin: 25px auto 20px;
+@media (max-width: 1024px) {
+  .cont {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .cont {
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 20px;
   }
   h1,.intro {
     margin: 40px 0;
@@ -91,10 +99,9 @@ h1:nth-of-type(2) {
   }
 }
 @media (max-width: 500px) {
-  .container {
-    height: 80vh;
-    padding-top: 80px;
-    margin: 25px auto 20px;
+  .cont {
+    max-width: 80vw;
+    margin-top: 100px;
   }
   h1,.intro {
     width: 100%;
@@ -102,19 +109,13 @@ h1:nth-of-type(2) {
   }
 }
 @media (max-width: 320px) {
-  .container {
-    height: 80vh;
+  .cont {
+    margin-top: 20px;
     padding-top: 0;
-    margin: 10px 5px 10px 5px;
   }
     h1,.intro {
     width: 100%;
     margin: 25px auto;
-  }
-}
-@media (min-width: 576px) {
-  .container, .container-sm {
-    max-width: 100% !important;
   }
 }
 </style>

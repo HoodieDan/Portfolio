@@ -1,6 +1,6 @@
 <template>
     <div id="AboutMe" class="container row">
-        <div class="col-lg-7 col-md-7 about-me" v-scrollanimation>
+        <div class="col-lg-7 col-md-7 about-me">
             <h3 class="light-slate"><span class="green mono smaller-h3">01.</span> About Me</h3> 
             <hr class="light-slate">
             <p>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
         </div>
-        <div class="col-lg-5 col-md-5" v-scrollanimation>
+        <div class="col-lg-5 col-md-5">
             <div class="image-container">
                 <img class="handsome" src="../assets/20200809_122303.jpg" alt="my_picture">
             </div>
@@ -79,6 +79,10 @@ div .container {
 }
 .mono {
     font-size: smaller;
+}
+div.col-lg-5.col-md-5 {
+    display: flex;
+    align-items: center;
 }
 .image-container {
     margin: 18% auto;
@@ -128,7 +132,7 @@ ul li::before {
 }
 @media (max-width: 820px) {
     div.container {
-        margin-top: 55%;
+        margin-top: 200px;
     }
 }
 @media (max-width: 500px) {
@@ -143,10 +147,9 @@ ul li::before {
 }
 @media (max-width: 320px) {
     div.container {
-        margin-top: 55%;
+        margin-top: 80px;
     }
     .about-me {
-        margin-top: 130px;
         padding: 0;
     }
 }

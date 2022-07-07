@@ -8,14 +8,14 @@
     <div class="projects">
         <!-- Tindog  -->
         <div class="tindog row" v-motion-slide-visible-once-bottom>
-            <div class="project-image col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="project-image col-6">
                 <a href="https://hoodiedan.github.io/tindog/" target="__blank">
                     <div class="photo-canvas">
-                        <img src="../assets/Tindog.png" alt="Tindog">
+                        <img class="img-fluid" src="../assets/Tindog.png" alt="Tindog">
                     </div>
                 </a>
             </div>
-            <div class="project-content col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="project-content col-6">
                 <h6 class="mono green">Featured Poject</h6>
                 <h2 class="light-slate">Tindog</h2>
                 <div class="project-description">
@@ -37,14 +37,14 @@
 
         <!-- One Central Clone -->
         <div class="one-central row" v-motion-slide-visible-once-bottom>
-            <div class="project-image col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="project-image col-6">
                 <a href="https://hoodiedan.github.io/One-CentralNG-clone/" target="__blank">
                     <div class="photo-canvas">
-                        <img src="../assets/OneCentral.png" alt="One Central NG">
+                        <img class="img-fluid" src="../assets/OneCentral.png" alt="One Central NG">
                     </div>
                 </a>
             </div>
-            <div class="project-content col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="project-content col-6">
                 <h6 class="mono green">Featured Poject</h6>
                 <h2 class="light-slate">One Central NG Clone</h2>
                 <div class="project-description">
@@ -66,14 +66,14 @@
 
         <!-- Portfolio Site -->
         <div class="portfolio row" v-motion-slide-visible-once-bottom>
-            <div class="project-image col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="project-image col-6">
                 <a href="https://hoodiedan.netlify.app" target="__blank">
                     <div class="photo-canvas">
-                        <img src="../assets/portfolio.png" alt="Portfolio Site">
+                        <img class="img-fluid" src="../assets/portfolio.png" alt="Portfolio Site">
                     </div>
                 </a>
             </div>
-            <div class="project-content col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="project-content col-6">
                 <h6 class="mono green">Featured Poject</h6>
                 <h2 class="light-slate">Portfolio Site</h2>
                 <div class="project-description">
@@ -138,9 +138,9 @@ div.container {
     width: 90vw;
 }
 div.photo-canvas {
-    height: 45vh;
-    width: 45vw;
+    max-width: 50vw;
     position: relative;
+    left: 30px;
 }
 div.project-content {
     text-align: right;
@@ -150,8 +150,8 @@ div.row {
     position: relative;
 }
 img {
-    height: 45vh;
-    width: 45vw;
+    height: auto;
+    width: 100%;
     position: absolute;
     filter: opacity(0.8) drop-shadow(0 0 0 #06ffc3);
     transition: all 0.5s linear;
@@ -171,6 +171,7 @@ div.project-description {
     box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
     position: relative;
+    right: 30px;
     z-index: 2;
     padding: 25px;
     border-radius: 4px;
@@ -187,14 +188,16 @@ div.project-description {
     color: #06ffc3;
 }
 @media (max-width: 820px) {
-    div.photo-canvas img {
+    div.photo-canvas {
         width: 70vw;
         opacity: 5%;
         z-index: 10;
     }
     div.project-content {
         width: 80vw;
-        position: absolute;
+    }
+    div.project-description {
+        right: 0;
     }
 }
 </style>
