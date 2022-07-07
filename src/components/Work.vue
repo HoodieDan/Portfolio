@@ -6,87 +6,28 @@
     </div>
 
     <div class="projects">
-        <!-- Tindog  -->
-        <div class="tindog row" v-motion-slide-visible-once-bottom>
+        <div v-for="(project, index) in featuredProjects" :key="index" class="row" v-motion-slide-visible-once-bottom>
             <div class="project-image col-6">
-                <a href="https://hoodiedan.github.io/tindog/" target="__blank">
+                <a :href="project.link" target="__blank">
                     <div class="photo-canvas">
-                        <img class="img-fluid" src="../assets/Tindog.png" alt="Tindog">
+                        <img class="img-fluid" :src="project.image" :alt="project.name">
                     </div>
                 </a>
             </div>
             <div class="project-content col-6">
                 <h6 class="mono green">Featured Poject</h6>
-                <h2 class="light-slate">Tindog</h2>
+                <h2 class="light-slate">{{ project.name }}</h2>
                 <div class="project-description">
                     <p>
-                        A minimal landing page of a dating website for dogs. 
-                        This was my first ever project and I still keep it as a 
-                        means to show my progress over the years. 
+                        {{ project.description }}
                     </p>
                 </div>
                 <div class="project-technologies">
-                    <p class="mono">HTML CSS</p>
+                    <p class="mono">{{ project.technologies }}</p>
                 </div>
                 <div class="links">
-                    <a href="https://github.com/HoodieDan/tindog" target="__blank" class="link"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://hoodiedan.github.io/tindog/" target="__blank" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- One Central Clone -->
-        <div class="one-central row" v-motion-slide-visible-once-bottom>
-            <div class="project-image col-6">
-                <a href="https://hoodiedan.github.io/One-CentralNG-clone/" target="__blank">
-                    <div class="photo-canvas">
-                        <img class="img-fluid" src="../assets/OneCentral.png" alt="One Central NG">
-                    </div>
-                </a>
-            </div>
-            <div class="project-content col-6">
-                <h6 class="mono green">Featured Poject</h6>
-                <h2 class="light-slate">One Central NG Clone</h2>
-                <div class="project-description">
-                    <p>
-                        This is a replica of the <span class="green">One Central NG</span> landing page.
-                        One Central is a product of <span class="green">Tishlabs Technologies</span>. 
-                        It is a fintech app that provides swift cash transactions.
-                    </p>
-                </div>
-                <div class="project-technologies">
-                    <p class="mono">HTML CSS Javascript</p>
-                </div>
-                <div class="links">
-                    <a href="https://github.com/HoodieDan/One-CentralNG-clone" target="__blank" class="link"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://hoodiedan.github.io/One-CentralNG-clone/" target="__blank" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Portfolio Site -->
-        <div class="portfolio row" v-motion-slide-visible-once-bottom>
-            <div class="project-image col-6">
-                <a href="https://hoodiedan.netlify.app" target="__blank">
-                    <div class="photo-canvas">
-                        <img class="img-fluid" src="../assets/portfolio.png" alt="Portfolio Site">
-                    </div>
-                </a>
-            </div>
-            <div class="project-content col-6">
-                <h6 class="mono green">Featured Poject</h6>
-                <h2 class="light-slate">Portfolio Site</h2>
-                <div class="project-description">
-                    <p>
-                        This is my personal portfolio website <span class="green">developed</span> by me.
-                    </p>
-                </div>
-                <div class="project-technologies">
-                    <p class="mono">HTML CSS Javascript Bootstrap Vue.js</p>
-                </div>
-                <div class="links">
-                    <a href="https://github.com/HoodieDan/portfolio" target="__blank" class="link"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://hoodiedan.netlify.app" target="__blank" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a :href="project.github" target="__blank" class="link"><i class="fa-brands fa-github"></i></a>
+                    <a :href="project.link" target="__blank" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
@@ -100,6 +41,39 @@
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: "Work",
+    data () {
+        return {
+            featuredProjects: [
+                {
+                    name: "Portfolio Website",
+                    description: `This is my personal portfolio website <span class="green">developed</span> by me.`,
+                    technologies: "HTML CSS Javascript Bootstrap Vue.js",
+                    image: require("../assets/portfolio.png"),
+                    github: "https://github.com/HoodieDan/portfolio",
+                    link: "https://hoodiedan.netlify.app"
+                },
+                {
+                    name: "One Central NG",
+                    description: `This is a replica of the <span class="green">One Central NG</span> landing page.
+                        One Central is a product of <span class="green">Tishlabs Technologies</span>. 
+                        It is a fintech app that provides swift cash transactions.`,
+                    technologies: "HTML CSS Javascript Bootstrap",
+                    image: require("../assets/OneCentral.png"),
+                    github: "https://github.com/HoodieDan/One-CentralNG-clone",
+                    link: "https://hoodiedan.github.io/One-CentralNG-clone/"
+                },
+                {
+                    name: "Tindog",
+                    description: `A minimal landing page of a dating website for dogs. 
+                        This was my first ever project.`,
+                    technologies: "HTML CSS",
+                    image: require("../assets/Tindog.png"),
+                    github: "https://github.com/HoodieDan/tindog",
+                    link: "https://hoodiedan.github.io/tindog/"
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -145,6 +119,8 @@ div.photo-canvas {
 div.project-content {
     text-align: right;
     z-index: 2;
+    position: relative;
+    right: 30px;
 }
 div.row {
     position: relative;
@@ -170,8 +146,6 @@ a.photo-canvas {
 div.project-description {
     box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    position: relative;
-    right: 30px;
     z-index: 2;
     padding: 25px;
     border-radius: 4px;
@@ -189,14 +163,18 @@ div.project-description {
 }
 @media (max-width: 820px) {
     div.photo-canvas {
-        width: 70vw;
+        width: 80vw;
+        height: 100%;
         opacity: 5%;
         z-index: 10;
+    }
+    img {
+        width: 80vw;
     }
     div.project-content {
         width: 80vw;
     }
-    div.project-description {
+    div.project-content {
         right: 0;
     }
 }

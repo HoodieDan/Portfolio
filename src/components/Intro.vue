@@ -6,10 +6,10 @@
       <h1>I build things for the web.</h1>
       <div class="intro">
         <p>I’m a <span class="green">Frontend Web Developer</span> specializing in building exceptional 
-        digital experiences. Currently, I’m focused on building skills in
-          various Frontend frameworks.</p>
+        digital experiences. I am an Engineer valued for driving high-performance accessible web experiences. 
+        I develop quality, user-friendly and scalable products.</p>
       </div>
-      <a href="#AboutMe"><button class="btn mono">I want to know more about you!</button></a>
+      <a href="#AboutMe"><button class="btn mono">I want to know more!</button></a>
     </div>
   </div>
 </template>

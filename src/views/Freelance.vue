@@ -5,13 +5,13 @@
 
         <ul>
             <li>
-                Created well functioning static websites for clients.
+                Create well functioning static / dynamic websites for clients.
             </li>
             <li>
-                Worked with HTML, CSS and JavaScript to turn high fidelity User Interface (UI) mockups to sleek high performance websites and web applications.
+                Work with HTML, CSS and JavaScript to turn high fidelity User Interface (UI) mockups to sleek high performance websites and web applications.
             </li>
             <li>
-                Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery.
+                Develop and maintain code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, Vue.js and jQuery.
             </li>
         </ul>
     </div>

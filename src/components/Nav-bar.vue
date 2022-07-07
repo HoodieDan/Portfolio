@@ -28,7 +28,7 @@
           <a class="navbar-link mono" href="#Contact"><span class="green">04.</span>Contact</a>
         </li>
         <li class="navbar-item">
-          <a class="navbar-link mono" href="#">
+          <a class="navbar-link mono" href="https://drive.google.com/uc?export=download&id=1HxMk1kQnaULKsOp1RCLy-n_CPgUqT0xS">
             <button class="btn">Resumé</button>
           </a>
         </li>
@@ -42,7 +42,7 @@
     <a class="navbar-link mono block light-slate" href="#Experience" @click="toggleNav"><span class="block green">02.</span>Experience</a>
     <a class="navbar-link mono block light-slate" href="#Work" @click="toggleNav"><span class="block green">03.</span>Work</a>
     <a class="navbar-link mono block light-slate" href="#Contact" @click="toggleNav"><span class="green block">04.</span>Contact</a>
-    <a class="navbar-link mono block light-slate" href="#" @click="toggleNav">
+    <a class="navbar-link mono block light-slate" href="https://drive.google.com/uc?export=download&id=1HxMk1kQnaULKsOp1RCLy-n_CPgUqT0xS" @click="toggleNav">
     <button class="btn">Resumé</button>
     </a>
   </aside>

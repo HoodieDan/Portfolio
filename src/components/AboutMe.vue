@@ -11,7 +11,7 @@
                 <br> <br>
                 Fast forward to today and I've had the priviledge of working at <span class="green">a startup</span>.
                 My main focus these days is building accessible, inclusive products and digital experiences at 
-                <span class="green">Tishlabs Technologies</span> for a variety of clients.
+                <a class="tishlabs" target="__blank" href="https://tishlabs.com.ng/"><span class="green">Tishlabs Technologies</span></a> for a variety of clients.
                 <br> <br>
                 Here are a few Technologies I have been working with recently:
                 <br> <br>
@@ -66,6 +66,9 @@ p {
     font-weight: 600;
     line-height: 1.8;
     padding-top: 35px;
+}
+a.tishlabs {
+    text-decoration: none;
 }
 ul {
     padding: 0;
