@@ -5,6 +5,7 @@
         <hr class="light-slate">
     </div>
 
+    <!-- featured projects  -->
     <div class="projects">
         <div v-for="(project, index) in featuredProjects" :key="index" class="row" v-motion-slide-visible-once-bottom>
             <div class="project-image col-6">

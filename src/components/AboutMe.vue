@@ -142,6 +142,9 @@ ul li::before {
     div.col-lg-6 {
         width: auto;
     }
+    .about-me {
+        padding-left: 0;
+    }
 }
 @media (max-width: 393px) {
     div.container {
