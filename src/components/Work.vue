@@ -46,7 +46,7 @@ export default {
             featuredProjects: [
                 {
                     name: "Portfolio Website",
-                    description: `This is my personal portfolio website <span class="green">developed</span> by me.`,
+                    description: `This is my personal portfolio website developed by me.`,
                     technologies: "HTML CSS Javascript Bootstrap Vue.js",
                     image: require("../assets/portfolio.png"),
                     github: "https://github.com/HoodieDan/portfolio",
@@ -54,8 +54,8 @@ export default {
                 },
                 {
                     name: "One Central NG",
-                    description: `This is a replica of the <span class="green">One Central NG</span> landing page.
-                        One Central is a product of <span class="green">Tishlabs Technologies</span>. 
+                    description: `This is a replica of the One Central NG landing page.
+                        One Central is a product of Tishlabs Technologies. 
                         It is a fintech app that provides swift cash transactions.`,
                     technologies: "HTML CSS Javascript Bootstrap",
                     image: require("../assets/OneCentral.png"),
