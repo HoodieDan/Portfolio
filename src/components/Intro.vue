@@ -57,7 +57,7 @@ h1:nth-of-type(2) {
   animation: enter 0.9s cubic-bezier(0.645,0.045,0.355,1) forwards;
 }
 .intro p {
-  font-size: 18px;
+  font-size: 1rem;
   animation: enter 1.2s cubic-bezier(0.645,0.045,0.355,1) forwards;
 }
 .light-slate {
@@ -65,7 +65,7 @@ h1:nth-of-type(2) {
 }
 .intro {
   width: 50%;
-  font-weight: 500;
+  font-weight: 400;
   padding: 2% 0;
 }
 .btn {
