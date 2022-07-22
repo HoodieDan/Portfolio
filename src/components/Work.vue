@@ -38,7 +38,7 @@
     <!-- Other projects  -->
     <h2 class="text-center light-slate mt-5">Other Noteworthy Projects</h2>
     <div class="others row">
-        <div v-for="(project, index) in otherProjects" :key="index" class="col-lg-4 col-sm-6">
+        <div v-for="(project, index) in otherProjects" :key="index" class="col-lg-4 col-sm-6" v-motion-slide-visible-once-bottom>
             <div class="other">
                 <a class="normal-link" :href="project.link" target="__blank">
                     <div class="project-top">
