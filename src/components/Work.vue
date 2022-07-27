@@ -146,6 +146,10 @@ div.row {
 div.project-technologies {
     padding-top: 20px;
 }
+div.project-technologies p {
+    font-weight: 300;
+    font-size: smaller;
+}
 div.container {
     margin: 10% auto;
     padding: 5%;
@@ -170,6 +174,7 @@ img {
     height: auto;
     width: 100%;
     position: absolute;
+    border-radius: 5px;
     filter: opacity(0.8) drop-shadow(0 0 0 #06ffc3);
     transition: all 0.5s linear;
     z-index: 0;
@@ -202,11 +207,16 @@ div.project-description {
 .link:hover {
     color: #06ffc3;
 }
+.col-sm-6 {
+    margin-bottom: 20px;
+}
 .other {
     background-color: #112240;
     padding: 5px 25px 15px 25px;
     cursor: pointer;
-    margin-bottom: 20px;
+    height: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px !important;
     box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
     transition: all 0.3s ease-out;
 }

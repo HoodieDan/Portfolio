@@ -1,13 +1,13 @@
 <template>
     <div class="right-link mono">
-        <a href="mailto:obodedaniel3@gmail.com">obodedaniel3@gmail.com</a> <hr>
+        <a class="mail" href="mailto:obodedaniel3@gmail.com">obodedaniel3@gmail.com</a> <hr>
     </div>
     <div class="left-links">
         <div class="font-awesome">
-            <a class="brand" href="https://github.com/HoodieDan" target="__blank"><i class="fa-brands fa-github"></i></a>
-            <a class="brand" href="https://instagram.com/the.7th.kind" target="__blank"><i class="fa-brands fa-instagram"></i></a>
-            <a class="brand" href="https://twitter.com/osemuu" target="__blank"><i class="fa-brands fa-twitter"></i></a>
-            <a class="brand" href="https://www.linkedin.com/in/daniel-obode-334144195/" target="__blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="brand" href="https://github.com/HoodieDan" target="__blank"><i class="link fa-brands fa-github"></i></a>
+            <a class="brand" href="https://instagram.com/the.7th.kind" target="__blank"><i class="link fa-brands fa-instagram"></i></a>
+            <a class="brand" href="https://twitter.com/osemuu" target="__blank"><i class="link fa-brands fa-twitter"></i></a>
+            <a class="brand" href="https://www.linkedin.com/in/daniel-obode-334144195/" target="__blank"><i class="link fa-brands fa-linkedin"></i></a>
         </div>
         <hr>
     </div>
@@ -23,7 +23,7 @@ export default {
 hr {
     color: #fff;
     display: inline-block;
-    width: 100px;
+    width: 200px;
     position: relative;
     top: 12px;
     height: 2px;
@@ -32,7 +32,7 @@ hr {
     transform: rotate(90deg);
     position: fixed;
     bottom: 150px;
-    right: -100px;
+    right: -150px;
     font-weight: 300;
     opacity: 0;
     animation: show 1s linear 2s forwards;
@@ -50,9 +50,11 @@ a {
     font-size: 0.9rem;
     letter-spacing: 0.1em;
     color: #8892b0;
+}
+.mail {
     transition: all .1s linear;
 }
-a:hover {
+a.mail:hover {
     color: #64ffda;
     font-size: 0.92rem;
 }
@@ -67,6 +69,9 @@ a:hover {
     padding: 10px;
     padding-right: 15px;
 }
+.link {
+    transition: all .2s ease-out;
+}
 .brand:nth-of-type(1) {
     transform: rotate(-90deg);
 }
@@ -79,8 +84,10 @@ a:hover {
 .brand:nth-of-type(4) {
     transform: rotate(-90deg);
 }
-.brand a:hover {
+.link:hover {
     color: #64ffda;
+    transform: translateY(-2px) scale(1.1);
+
 }
 .left-links {
     transform: rotate(90deg);

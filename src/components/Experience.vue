@@ -6,8 +6,8 @@
     </div>
 
     <div class="router-links">
-        <router-link to="/" class="router-link" :class="{ 'active': homeView }"><h6>Tishlabs</h6></router-link>
-        <router-link to="/freelance" class="router-link" :class="{ 'active': freelanceView }"><h6>Freelance</h6></router-link>
+        <router-link to="/" class="router-link mono" :class="{ 'active': homeView }"><h6>Tishlabs</h6></router-link>
+        <router-link to="/freelance" class="router-link mono" :class="{ 'active': freelanceView }"><h6>Freelance</h6></router-link>
     </div>
     <router-view />
   </div>
@@ -37,6 +37,7 @@ h3 {
 h6 {
     display: inline-block;
     padding: 15px;
+    font-size: 13px;
 }
 hr {
     display: inline-block;
