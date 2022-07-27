@@ -31,7 +31,7 @@ hr {
 .right-link {
     transform: rotate(90deg);
     position: fixed;
-    bottom: 150px;
+    bottom: 120px;
     right: -150px;
     font-weight: 300;
     opacity: 0;
@@ -52,11 +52,11 @@ a {
     color: #8892b0;
 }
 .mail {
-    transition: all .1s linear;
+    transition: all .2s ease-out;
 }
 a.mail:hover {
     color: #64ffda;
-    font-size: 0.92rem;
+    transform: scale(1.1);
 }
 .font-awesome {
     display: flex;
