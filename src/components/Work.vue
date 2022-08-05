@@ -98,6 +98,13 @@ export default {
             ],
             otherProjects: [
                 {
+                    name: "Google Keep Clone",
+                    description: "A simple Google Keep clone built with React and Firebase",
+                    technologies: "React Firebase",
+                    github: "https://github.com/HoodieDan/Google-Keep-Clone",
+                    link: "https://google-keep-react-clone.netlify.app/"
+                },
+                {
                     name: "Tindog",
                     description: `A minimal landing page of a dating website for dogs. 
                         This was my first ever project.`,
@@ -221,7 +228,7 @@ div.project-description {
     transition: all 0.3s ease-out;
 }
 .other:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 .project-top {
     display: flex;

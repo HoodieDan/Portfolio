@@ -107,6 +107,9 @@ h1:nth-of-type(2) {
     width: 100%;
     margin: 25px auto;
   }
+  .intro p {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 320px) {
   .cont {
