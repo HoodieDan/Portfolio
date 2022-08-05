@@ -65,7 +65,7 @@ hr {
     width: 20vw ;
 }
 p {
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.8;
     padding-top: 35px;
 }
@@ -146,6 +146,9 @@ ul li::before {
     }
     .about-me {
         padding-left: 0;
+    }
+    p {
+        font-weight: 400;
     }
 }
 @media (max-width: 393px) {
