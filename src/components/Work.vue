@@ -7,7 +7,7 @@
 
     <!-- featured projects  -->
     <div class="projects">
-        <div v-for="(project, index) in featuredProjects" :key="index" class="row" v-motion-slide-visible-once-bottom>
+        <div v-for="(project, index) in featuredProjects" :key="index" class="row project-container" :style="{ backgroundImage: mobile ? 'url(' + project.image + ')' : 'none' }" v-motion-slide-visible-once-bottom>
             <div class="project-image col-6">
                 <a :href="project.link" target="__blank">
                     <div class="photo-canvas">
@@ -65,8 +65,15 @@
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: "Work",
+    mounted () {
+        if (window.innerWidth <= 575) {
+            console.log('mobile')
+            this.mobile = true
+        }
+    },
     data () {
         return {
+            mobile: false,
             featuredProjects: [
                 {
                     name: "Twitter Clone",
@@ -262,10 +269,32 @@ div.project-description {
         width: 80vw;
     }
     div.project-content {
-        width: 80vw;
+        width: 100%;
+        right: 0;
+    }
+}
+@media (max-width: 575px) {
+    div.project-container {
+        background-size: cover;
+        box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
     }
     div.project-content {
-        right: 0;
+        padding: 40px;
+        /* filter: opacity(0.8) drop-shadow(0 0 0 #64ffda); */
+        background-color: rgba(17, 34, 64, 0.9);
+        background-blend-mode: multiply;
+        text-align: left;
+    }
+    div.project-content:before {
+        content: "";
+        opacity: 0.3;
+    }
+    div.project-description {
+        padding: 25px 0;
+        background: transparent;
+    }
+    a.link:nth-of-type(1) {
+        padding-left: 0;
     }
 }
 </style>
