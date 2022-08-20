@@ -18,6 +18,7 @@
       </div>
     </div>
     <p class="mono">Built by Daniel Obode</p> 
+    <!-- <p class="smaller mono">Designed by Brittany Chiang</p> -->
   </footer>
 </template>
 
@@ -85,6 +86,9 @@ div.font-awesome {
 .btn:hover {
   background-color: #64ffda;
   color: #0a192f;
+}
+p.smaller {
+  font-size: 15px;
 }
 @media (max-width: 500px) {
   div.container {

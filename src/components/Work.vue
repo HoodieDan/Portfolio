@@ -79,7 +79,7 @@ export default {
                     name: "Twitter Clone",
                     description: `This is a clone of the twitter UI with the feed, profile and
                     comment pages.`,
-                    technologies: "HTML CSS Javascript Bootstrap Vue.js",
+                    technologies: "HTML CSS Javascript Bootstrap Nuxt",
                     image: require("../assets/twitter.png"),
                     github: "https://github.com/HoodieDan/nuxtjs-twitter-clone",
                     link: "https://hoodietwitter.vercel.app"
@@ -87,11 +87,22 @@ export default {
                 {
                     name: "Portfolio Website",
                     description: `This is my personal portfolio website developed by me.`,
-                    technologies: "HTML CSS Javascript Bootstrap Vue.js",
+                    technologies: "HTML CSS Javascript Bootstrap Vue",
                     image: require("../assets/portfolio.png"),
                     github: "https://github.com/HoodieDan/portfolio",
                     link: "https://hoodiedan.netlify.app"
                 },
+                {
+                    name: "Pizza Website",
+                    description: `This is an E-Commerce website for buying pizza and
+                        other snacks and desserts.`,
+                    technologies: "HTML CSS Javascript Nuxt",
+                    image: require("../assets/pizza.png"),
+                    github: "https://github.com/HoodieDan/pizza-den",
+                    link: "https://pizza-app-web.netlify.app/"
+                }
+            ],
+            otherProjects: [
                 {
                     name: "One Central NG",
                     description: `This is a replica of the One Central NG landing page.
@@ -101,9 +112,7 @@ export default {
                     image: require("../assets/OneCentral.png"),
                     github: "https://github.com/HoodieDan/One-CentralNG-clone",
                     link: "https://hoodiedan.github.io/One-CentralNG-clone/"
-                }
-            ],
-            otherProjects: [
+                },
                 {
                     name: "Google Keep Clone",
                     description: "A simple Google Keep clone built with React and Firebase",
@@ -122,7 +131,7 @@ export default {
                 {
                     name: "CSS Perspective Playground",
                     description: `A simple website to show how css perspectives work.`,
-                    technologies: "Vue.js",
+                    technologies: "Vue",
                     github: "https://github.com/HoodieDan/CSS-Perspective-Playground",
                     link: "https://hoodiedan.github.io/CSS-Perspective-Playground/"
                 },

@@ -1,24 +1,52 @@
 <template>
   <PageLoader></PageLoader>
   <body :class="{ 'no-scroll': navIsOpen }" v-if="show">
+  
+    <!-- Navigation bar  -->
     <div>
       <NavBar :navIsOpen="navIsOpen"
-    @toggle-nav="navIsOpen = !navIsOpen"
-    :class="{ 'blur': navIsOpen }"></NavBar>
+        @toggle-nav="navIsOpen = !navIsOpen"
+      >
+      </NavBar>
     </div>
-    <Intro :navIsOpen="navIsOpen"
+
+    <!-- My introduction -->
+    <Intro 
+    :navIsOpen="navIsOpen"
     :class="{ 'blur': navIsOpen }"
-    v-scroll-lock="navIsOpen"></Intro>
+    v-scroll-lock="navIsOpen"
+    >
+    </Intro>
+
+    <!-- Links -->
     <BottomLinks></BottomLinks>
-    <AboutMe v-motion-slide-visible-once-bottom
-    :class="{ 'blur': navIsOpen }"></AboutMe>
-    <Experience v-motion-slide-visible-once-bottom
-    :class="{ 'blur': navIsOpen }"></Experience>
+
+    <!-- Little bit about myself -->
+    <AboutMe 
+    v-motion-slide-visible-once-bottom
+    :class="{ 'blur': navIsOpen }"
+    >
+    </AboutMe>
+
+    <!-- Work Experience -->
+    <Experience 
+    v-motion-slide-visible-once-bottom
+    :class="{ 'blur': navIsOpen }"
+    >
+    </Experience>
+
+    <!-- Things I have built -->
     <Work
     :class="{ 'blur': navIsOpen }"
-    v-motion-slide-visible-once-bottom></Work>
-    <div :class="{ 'blur': navIsOpen }">
-    <Contact></Contact>
+    v-motion-slide-visible-once-bottom
+    >
+    </Work>
+
+    <!-- How to contact me -->
+    <div 
+    :class="{ 'blur': navIsOpen }"
+    >
+      <Contact></Contact>
     </div>
   </body>
 </template>

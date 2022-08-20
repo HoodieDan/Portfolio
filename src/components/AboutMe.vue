@@ -92,21 +92,20 @@ div.col-lg-5.col-md-5 {
 .image-container {
     margin: 18% auto;
     border: 2px #64ffda solid;
-    border-radius: 5px;
+    border-radius: 4px;
     position: relative;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     transition: all 0.6s ease-in;
 }
 .image-container:hover {
-    bottom: 5px;
-    left: 5px;
+    transform: translateZ(3px) !important;
 }
 .handsome {
-    border-radius: 5px;
+    border-radius: 4px;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     bottom: 20px;
     right: 20px;
     cursor: pointer;
@@ -116,8 +115,9 @@ div.col-lg-5.col-md-5 {
 .handsome:hover{
     filter: none !important;
     opacity: 1 !important;
-    bottom: 15px;
-    right: 15px;
+    transform: translateZ(0px) !important;
+    /* bottom: 15px;
+    right: 15px; */
 }
 ul {
   list-style: none; 
@@ -140,7 +140,15 @@ ul li::before {
         margin-top: 200px;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 575px) {
+    .image-container {
+        width: 200px;
+        height: 200px;
+    }
+    .handsome {
+        width: 200px;
+        height: 200px;
+    }
     div.col-lg-6 {
         width: auto;
     }
