@@ -292,6 +292,7 @@ div.project-description {
     div.project-description {
         padding: 25px 0;
         background: transparent;
+        box-shadow: none;
     }
     a.link:nth-of-type(1) {
         padding-left: 0;
