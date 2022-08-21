@@ -84,7 +84,7 @@ export default {
       });
       window.addEventListener('scroll', () => {
         let st = window.pageYOffset || document.documentElement.scrollTop;
-        if ((st > 200) && (window.innerWidth >= 1024)) {
+        if ((st > 250) && (window.innerWidth >= 1024)) {
             this.sticky = false
         } else {
           this.sticky = true
