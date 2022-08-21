@@ -108,11 +108,11 @@ body {
   background-color: #0a192f;
   color: #8892b0;
 }
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 0.3em;
 }
  
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 h3 {
@@ -153,7 +153,14 @@ body::-webkit-scrollbar-thumb {
 } */
 .nav-div {
   animation: nav-up 1s normal ease-out forwards;
+  overflow-x: hidden;
 }
+
+/* @media (min-width: 768px) {
+  .nav-div {
+    overflow-x: hidden !important;
+  }
+} */
 @media (max-width: 1023px) {
   .nav-container {
     transition: all 1s ease-out;
