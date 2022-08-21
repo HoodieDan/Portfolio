@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar" :class="{ 'blur-bg': !navIsOpen }">
     <div>
       <a class="navbar-brand logo green" href="#"><img src="../assets/logo.svg" alt="logo" style="width: 60px"></a>
     </div>
@@ -178,11 +178,12 @@ span.top-bar {
 span.middle-bar {
   opacity: 1;
   filter: alpha(opacity=100);
-  width: 75%;
+  width: 85%;
   border-radius: 32px;
 }
 span.bottom-bar {
   margin-top: 10px;
+  width: 70%;
   transform: rotate(0deg);
   border-radius: 32px;
 }
@@ -230,7 +231,7 @@ a.navbar-link:hover {
 .bottom-icon-animate {
   margin-top: 0px !important;
   transform: rotate(-135deg) !important;
-  width: 100% !;
+  width: 100% !important;
 }
 .block {
   display: block;

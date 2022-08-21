@@ -1,9 +1,9 @@
 <template>
   <PageLoader></PageLoader>
-  <body :class="{ 'no-scroll': navIsOpen }" v-if="show">
+  <body v-if="show">
   
     <!-- Navigation bar  -->
-    <div>
+    <div :class="{ 'sticky-top': stickyRemove,'nav-div': shouldFadeOut }">
       <NavBar :navIsOpen="navIsOpen"
         @toggle-nav="navIsOpen = !navIsOpen"
       >
@@ -68,10 +68,30 @@ export default {
       return {
         navIsOpen: false,
         show: false,
+        stickyRemove: true,
+        shouldFadeOut: false,
       }
     },
     mounted() {
       this.showApp()
+      window.addEventListener('scroll', () => {
+        let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+        if (st > 250) {
+            this.stickyRemove = false
+            console.log('remove')
+        } else {
+          this.stickyRemove = true
+        }
+      });
+      window.addEventListener('scroll', () => {
+        let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+        if (st > 150) {
+            this.shouldFadeOut = true
+            console.log('muruve')
+        } else {
+          this.shouldFadeOut = false
+        }
+      })
     },
     methods: {
       showApp() {
@@ -121,5 +141,21 @@ body::-webkit-scrollbar-thumb {
 }
 .no-scroll {
   position: fixed !important;
+}
+.blur-bg {
+  backdrop-filter: blur(7px) !important;
+  /* background-color: #0a192f !important; Fallback color */
+  background-color: rgba(10, 25, 47, 0.1) !important; /* Black w/opacity/see-through */
+}
+.nav-div {
+  animation: nav-up 1s alternate ease-out;
+}
+@keyframes nav-up {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-150px);
+  }
 }
 </style>
