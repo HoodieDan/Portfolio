@@ -70,26 +70,27 @@ export default {
         show: false,
         sticky: true,
         shouldFadeOut: false,
+        lastScrollTop: 0,
       }
     },
     mounted() {
       this.showApp()
       window.addEventListener('scroll', () => {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
+        let st = window.scrollY;
         if (st > 150) {
             this.shouldFadeOut = true
         } else {
             this.shouldFadeOut = false
         }
       });
-      window.addEventListener('scroll', () => {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        if ((st > 250) && (window.innerWidth >= 1024)) {
-            this.sticky = false
-        } else {
-          this.sticky = true
-        }
-      });
+      // window.addEventListener('scroll', () => {
+      //   let st = window.scrollY;
+      //   if ((st > 250) && (window.innerWidth >= 1024)) {
+      //       this.sticky = false
+      //   } else {
+      //     this.sticky = true
+      //   }
+      // });
     },
     methods: {
       showApp() {
@@ -145,14 +146,14 @@ body::-webkit-scrollbar-thumb {
   /* background-color: #0a192f !important; Fallback color */
   background-color: rgba(10, 25, 47, 0.1) !important; /* Black w/opacity/see-through */
 }
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .nav-div {
-    animation: nav-up 1s alternate ease-out;
+    animation: nav-up 1s alternate ease-out forwards;
   }
-}
-/* .nav-div {
-  animation: nav-up 1s normal ease-out;
 } */
+.nav-div {
+  animation: nav-up 1s normal ease-out forwards;
+}
 @media (max-width: 1023px) {
   .nav-container {
     transition: all 1s ease-out;
