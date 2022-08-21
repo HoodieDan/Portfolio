@@ -3,7 +3,7 @@
   <body v-if="show">
   
     <!-- Navigation bar  -->
-    <div :class="{ 'sticky-top': stickyRemove,'nav-div': shouldFadeOut }">
+    <div :class="{ 'sticky-top': sticky,'nav-div': shouldFadeOut }">
       <NavBar :navIsOpen="navIsOpen"
         @toggle-nav="navIsOpen = !navIsOpen"
       >
@@ -68,7 +68,7 @@ export default {
       return {
         navIsOpen: false,
         show: false,
-        stickyRemove: true,
+        sticky: true,
         shouldFadeOut: false,
       }
     },
@@ -76,11 +76,11 @@ export default {
       this.showApp()
       window.addEventListener('scroll', () => {
         let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-        if (st > 250) {
-            this.stickyRemove = false
+        if (st > 200) {
+            this.sticky = false
             console.log('remove')
         } else {
-          this.stickyRemove = true
+          this.sticky = true
         }
       });
       window.addEventListener('scroll', () => {
