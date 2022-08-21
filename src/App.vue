@@ -1,6 +1,6 @@
 <template>
   <PageLoader></PageLoader>
-  <body v-if="show">
+  <body class="body" v-if="show">
   
     <!-- Navigation bar  -->
     <div class="nav-container" :class="{ 'sticky-top': sticky,'nav-div': shouldFadeOut }">
@@ -69,12 +69,14 @@ export default {
         navIsOpen: false,
         show: false,
         sticky: true,
+        upScroll: false,
         shouldFadeOut: false,
         lastScrollTop: 0,
       }
     },
     mounted() {
       this.showApp()
+      // let lastScroll = 0;
       window.addEventListener('scroll', () => {
         let st = window.scrollY;
         if (st > 150) {
@@ -83,12 +85,17 @@ export default {
             this.shouldFadeOut = false
         }
       });
-      // window.addEventListener('scroll', () => {
-      //   let st = window.scrollY;
-      //   if ((st > 250) && (window.innerWidth >= 1024)) {
-      //       this.sticky = false
-      //   } else {
-      //     this.sticky = true
+      // window.addEventListener("scroll", () => { 
+      //   let currentScroll = window.scrollY; // Get Current Scroll Value
+
+      //   if (currentScroll > 0 && lastScroll <= currentScroll) {
+      //     lastScroll = currentScroll;
+      //     console.log('scrolling-down')
+      //     this.upScroll = false
+      //   }else{
+      //     lastScroll = currentScroll;
+      //     console.log('scrolling-up')
+      //     this.upScroll = true
       //   }
       // });
     },
@@ -155,7 +162,9 @@ body::-webkit-scrollbar-thumb {
   animation: nav-up 1s normal ease-out forwards;
   overflow-x: hidden;
 }
-
+.up-scroll {
+  animation: nav-up 1s reverse ease-in forwards;
+}
 /* @media (min-width: 768px) {
   .nav-div {
     overflow-x: hidden !important;
