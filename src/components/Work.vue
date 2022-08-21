@@ -16,7 +16,7 @@
                 </a>
             </div>
             <div class="project-content col-6">
-                <h6 class="mono green">Featured Poject</h6>
+                <h6 class="mono green">Featured Project</h6>
                 <h2 class="light-slate">{{ project.name }}</h2>
                 <div class="project-description">
                     <p>
