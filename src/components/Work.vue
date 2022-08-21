@@ -79,7 +79,7 @@ export default {
                     name: "Twitter Clone",
                     description: `This is a clone of the twitter UI with the feed, profile and
                     comment pages.`,
-                    technologies: "HTML CSS Javascript Bootstrap Nuxt",
+                    technologies: "HTML SCSS Javascript Bootstrap Nuxt",
                     image: require("../assets/twitter.png"),
                     github: "https://github.com/HoodieDan/nuxtjs-twitter-clone",
                     link: "https://hoodietwitter.vercel.app"
