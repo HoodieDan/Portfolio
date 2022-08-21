@@ -3,7 +3,7 @@
   <body v-if="show">
   
     <!-- Navigation bar  -->
-    <div :class="{ 'sticky-top': sticky,'nav-div': shouldFadeOut }">
+    <div class="nav-container" :class="{ 'sticky-top': sticky,'nav-div': shouldFadeOut }">
       <NavBar :navIsOpen="navIsOpen"
         @toggle-nav="navIsOpen = !navIsOpen"
       >
@@ -75,23 +75,21 @@ export default {
     mounted() {
       this.showApp()
       window.addEventListener('scroll', () => {
-        let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-        if (st > 200) {
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > 150) {
+            this.shouldFadeOut = true
+        } else {
+            this.shouldFadeOut = false
+        }
+      });
+      window.addEventListener('scroll', () => {
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        if ((st > 200) && (window.innerWidth >= 1024)) {
             this.sticky = false
-            console.log('remove')
         } else {
           this.sticky = true
         }
       });
-      window.addEventListener('scroll', () => {
-        let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-        if (st > 150) {
-            this.shouldFadeOut = true
-            console.log('muruve')
-        } else {
-          this.shouldFadeOut = false
-        }
-      })
     },
     methods: {
       showApp() {
@@ -147,8 +145,18 @@ body::-webkit-scrollbar-thumb {
   /* background-color: #0a192f !important; Fallback color */
   background-color: rgba(10, 25, 47, 0.1) !important; /* Black w/opacity/see-through */
 }
-.nav-div {
-  animation: nav-up 1s alternate ease-out;
+@media (min-width: 1024px) {
+  .nav-div {
+    animation: nav-up 1s alternate ease-out;
+  }
+}
+/* .nav-div {
+  animation: nav-up 1s normal ease-out;
+} */
+@media (max-width: 1023px) {
+  .nav-container {
+    transition: all 1s ease-out;
+  }
 }
 @keyframes nav-up {
   from {
