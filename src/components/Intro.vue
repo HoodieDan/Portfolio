@@ -5,7 +5,7 @@
       <h1 class="light-slate">Daniel Obode.</h1>
       <h1>I build things for the web.</h1>
       <div class="intro">
-        <p>I’m a <span class="green">Frontend Web Developer</span> specializing in designing and building exceptional 
+        <p>I’m a <span class="green">Frontend Web Developer</span> specializing in building (and occassionally designing) exceptional 
         digital experiences. I am an Engineer valued for driving high-performance accessible web experiences. 
         I develop quality, user-friendly and scalable products.</p>
       </div>
