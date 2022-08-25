@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" :class="{ 'blur-bg': !navIsOpen }">
+  <nav class="navbar" :class="{ 'blur-bg': shouldBlur }">
     <div>
       <div>
         <a class="navbar-brand logo green" href="#">
@@ -58,7 +58,18 @@ export default {
   data() {
     return {
       clicked: 0,
+      shouldBlur: false,
     }
+  },
+  mounted () {
+    window.addEventListener('scroll', () => {
+        let st = window.scrollY;
+        if (st > 100) {
+            this.shouldBur = true
+        } else {
+            this.shouldBlur = false
+        }
+      });
   },
   props: {
     navIsOpen: Boolean,
