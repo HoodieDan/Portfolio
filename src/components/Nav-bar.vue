@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" :class="{ 'blur-bg': shouldBlur }">
+  <nav class="navbar" :class="{ 'blur-bg': !navIsOpen }">
     <div>
       <div>
         <a class="navbar-brand logo green" href="#">
@@ -58,18 +58,7 @@ export default {
   data() {
     return {
       clicked: 0,
-      shouldBlur: false,
     }
-  },
-  mounted () {
-    window.addEventListener('scroll', () => {
-        let st = window.scrollY;
-        if (st > 100) {
-            this.shouldBur = true
-        } else {
-            this.shouldBlur = false
-        }
-      });
   },
   props: {
     navIsOpen: Boolean,
@@ -107,6 +96,10 @@ nav {
   height: 80px;
   width: 100%;
   padding: 1% 4% 2%;
+}
+.blur-bg {
+    backdrop-filter: blur(3px);
+    background-color: rgba(10, 25, 47, 0.1);
 }
 aside {
   display: flex;
@@ -162,6 +155,7 @@ aside button.btn {
 }
 a img {
   animation: flip 2s ease-out forwards !important;
+  z-index: 10;
 }
 @keyframes flip {
   from {
@@ -301,6 +295,12 @@ li:nth-of-type(5) {
         padding-top: 3%;
     }
 }
+@media (min-width: 820px) {
+  /* .blur-bg {
+    backdrop-filter: blur(3px);
+    background-color: rgba(10, 25, 47, 0.1);
+  } */
+}
 @media (max-width: 768px) {
   ul.navbar-navi {
     display: none;
@@ -313,6 +313,10 @@ li:nth-of-type(5) {
   .toggler-icon {
     display: block;
   }
+  /* .blur-bg {
+    backdrop-filter: none;
+    background-color: rgba(10, 25, 47, 1);
+  } */
 }
 @media (max-width: 500px) {
     a img {

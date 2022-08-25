@@ -148,11 +148,7 @@ body::-webkit-scrollbar-thumb {
 .no-scroll {
   position: fixed !important;
 }
-.blur-bg {
-  backdrop-filter: blur(3px) !important;
-  /* background-color: #0a192f !important; Fallback color */
-  background-color: rgba(10, 25, 47, 0.1) !important; /* Black w/opacity/see-through */
-}
+
 /* @media (min-width: 1024px) {
   .nav-div {
     animation: nav-up 1s alternate ease-out forwards;
@@ -174,6 +170,11 @@ body::-webkit-scrollbar-thumb {
   .nav-container {
     transition: all 1s ease-out;
   }
+  /* .blur-bg {
+  backdrop-filter: blur(3px); */
+  /* background-color: #0a192f !important; Fallback color */
+  /* background-color: rgba(10, 25, 47, 0.1);  */
+  /* } */
 }
 @keyframes nav-up {
   from {
