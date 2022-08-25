@@ -108,7 +108,7 @@ h1:nth-of-type(2) {
     margin: 25px auto;
   }
   .intro p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 320px) {

@@ -149,7 +149,7 @@ body::-webkit-scrollbar-thumb {
   position: fixed !important;
 }
 .blur-bg {
-  backdrop-filter: blur(7px) !important;
+  backdrop-filter: blur(3px) !important;
   /* background-color: #0a192f !important; Fallback color */
   background-color: rgba(10, 25, 47, 0.1) !important; /* Black w/opacity/see-through */
 }

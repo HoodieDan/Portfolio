@@ -1,7 +1,11 @@
 <template>
   <nav class="navbar" :class="{ 'blur-bg': !navIsOpen }">
     <div>
-      <a class="navbar-brand logo green" href="#"><img src="../assets/logo.svg" alt="logo" style="width: 60px"></a>
+      <div>
+        <a class="navbar-brand logo green" href="#">
+          <img src="../assets/logo.svg" alt="logo" style="width: 60px">
+        </a>
+      </div>
     </div>
     <div class="navi-items">
       <button class="navbar-toggle" type="button" aria-label="Toggle navigation" 
