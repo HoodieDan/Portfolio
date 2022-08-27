@@ -97,10 +97,6 @@ nav {
   width: 100%;
   padding: 1% 4% 2%;
 }
-.blur-bg {
-    backdrop-filter: blur(3px);
-    background-color: rgba(10, 25, 47, 0.1);
-}
 aside {
   display: flex;
   flex-direction: column;
@@ -296,10 +292,10 @@ li:nth-of-type(5) {
     }
 }
 @media (min-width: 820px) {
-  /* .blur-bg {
+  .blur-bg {
     backdrop-filter: blur(3px);
     background-color: rgba(10, 25, 47, 0.1);
-  } */
+  }
 }
 @media (max-width: 768px) {
   ul.navbar-navi {
