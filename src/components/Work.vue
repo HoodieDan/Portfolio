@@ -105,13 +105,13 @@ export default {
             otherProjects: [
                 {
                     name: "One Central NG",
-                    description: `This is a replica of the One Central NG landing page.
+                    description: `This is the One Central NG landing page.
                         One Central is a product of Tishlabs Technologies. 
                         It is a fintech app that provides swift cash transactions.`,
                     technologies: "HTML CSS Javascript Bootstrap",
                     image: require("../assets/OneCentral.png"),
                     github: "https://github.com/HoodieDan/One-CentralNG-clone",
-                    link: "https://hoodiedan.github.io/One-CentralNG-clone/"
+                    link: "https://www.onecentral.ng"
                 },
                 {
                     name: "Google Keep Clone",
