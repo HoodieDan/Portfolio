@@ -41,15 +41,25 @@
   </nav>
 
   <!-- mobile navigation  -->
-  <aside :class="{ 'leave-animation': navIsOpen === false, 'invisible': clicked === 0, }">
-    <a class="navbar-link mono block light-slate" href="#AboutMe" @click="toggleNav"><span class="block green">01.</span>About</a>
-    <a class="navbar-link mono block light-slate" href="#Experience" @click="toggleNav"><span class="block green">02.</span>Experience</a>
-    <a class="navbar-link mono block light-slate" href="#Work" @click="toggleNav"><span class="block green">03.</span>Work</a>
-    <a class="navbar-link mono block light-slate" href="#Contact" @click="toggleNav"><span class="green block">04.</span>Contact</a>
-    <a class="navbar-link mono block light-slate" href="https://drive.google.com/uc?export=download&id=1HxMk1kQnaULKsOp1RCLy-n_CPgUqT0xS" @click="toggleNav">
-    <button class="btn">Resumé</button>
-    </a>
-  </aside>
+  <div
+    class="backdrop"
+    @wheel.self.prevent
+    @touchmove.self.prevent
+    @scroll.self.prevent
+    @touch.self="toggleNav"
+    @click.self="toggleNav"
+    v-show="navIsOpen"
+  >
+    <aside :class="{ 'leave-animation': navIsOpen === false, 'invisible': clicked === 0, }">
+      <a class="navbar-link mono block light-slate" href="#AboutMe" @click="toggleNav"><span class="block green">01.</span>About</a>
+      <a class="navbar-link mono block light-slate" href="#Experience" @click="toggleNav"><span class="block green">02.</span>Experience</a>
+      <a class="navbar-link mono block light-slate" href="#Work" @click="toggleNav"><span class="block green">03.</span>Work</a>
+      <a class="navbar-link mono block light-slate" href="#Contact" @click="toggleNav"><span class="green block">04.</span>Contact</a>
+      <a class="navbar-link mono block light-slate" href="https://drive.google.com/uc?export=download&id=1HxMk1kQnaULKsOp1RCLy-n_CPgUqT0xS" @click="toggleNav">
+      <button class="btn">Resumé</button>
+      </a>
+    </aside>
+  </div>
 </template>
 
 <script>
@@ -97,6 +107,17 @@ nav {
   width: 100%;
   padding: 1% 4% 2%;
 }
+div.backdrop {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    transition: all 0.5s linear ease-out;
+    z-index: 10;
+}
 aside {
   display: flex;
   flex-direction: column;
@@ -112,6 +133,7 @@ aside {
   transform: translateX(1000px);
   z-index: 10;
   padding: 80px 10px;
+  transition: transform 0.5s linear;
   animation: show 0.5s linear forwards;
 }
 .aside-color {
@@ -151,7 +173,7 @@ aside button.btn {
 }
 a img {
   animation: flip 2s ease-out forwards !important;
-  z-index: 10;
+  z-index: 1000;
 }
 @keyframes flip {
   from {
@@ -174,6 +196,7 @@ button.navbar-toggle {
   cursor: pointer;
   width: 30px;
   height: 30px;
+  z-index: 1000;
 }
 span.top-bar {
   margin-top: -10px;

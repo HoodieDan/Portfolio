@@ -11,7 +11,7 @@
             <div class="project-image col-6">
                 <a :href="project.link" target="__blank">
                     <div class="photo-canvas">
-                        <img class="img-fluid" :src="project.image" :alt="project.name">
+                        <img :src="project.image" :alt="project.name">
                     </div>
                 </a>
             </div>
@@ -36,7 +36,7 @@
     </div>
 
     <!-- Other projects  -->
-    <h2 class="text-center light-slate mt-5">Other Noteworthy Projects</h2>
+    <h2 class="text-center light-slate other-projects">Other Noteworthy Projects</h2>
     <div class="others row">
         <div v-for="(project, index) in otherProjects" :key="index" class="col-lg-4 col-sm-6" v-motion-slide-visible-once-bottom>
             <div class="other">
@@ -76,26 +76,31 @@ export default {
             mobile: false,
             featuredProjects: [
                 {
+                    name: "Drew Music",
+                    description: `This is a fullstack music player progressive web. It includes functions such as
+                    authentication, file uploads, playing of music and many more! The state management was
+                    done with Vuex, testing (snapshot, e2e and unit) with Jest and Cypress, authentication
+                    and storage with firebase and finally, form validation with Vee-Validate`,
+                    technologies: "HTML CSS Javascript TailwindCSS Vue SCSS Firebase",
+                    image: require("../assets/music.png"),
+                    github: "https://github.com/HoodieDan/Drew-Music",
+                    link: "https://drew-music.netlify.app"
+                },
+                {
                     name: "Twitter Clone",
                     description: `This is a clone of the twitter UI with the feed, profile and
-                    comment pages.`,
+                    comment pages. It is fully responsive and was built Nuxt. State management was handled
+                    using Vuex.`,
                     technologies: "HTML SCSS Javascript Bootstrap Nuxt",
                     image: require("../assets/twitter.png"),
                     github: "https://github.com/HoodieDan/nuxtjs-twitter-clone",
                     link: "https://hoodietwitter.vercel.app"
                 },
                 {
-                    name: "Portfolio Website",
-                    description: `This is my personal portfolio website developed by me.`,
-                    technologies: "HTML CSS Javascript Bootstrap Vue",
-                    image: require("../assets/portfolio.png"),
-                    github: "https://github.com/HoodieDan/portfolio",
-                    link: "https://hoodiedan.netlify.app"
-                },
-                {
                     name: "Pizza Website",
                     description: `This is an E-Commerce website for buying pizza and
-                        other snacks and desserts.`,
+                        other snacks and desserts. It was made using Nuxt and the state management
+                        was handled using Vuex.`,
                     technologies: "HTML CSS Javascript Nuxt",
                     image: require("../assets/pizza.png"),
                     github: "https://github.com/HoodieDan/pizza-den",
@@ -105,13 +110,21 @@ export default {
             otherProjects: [
                 {
                     name: "One Central NG",
-                    description: `This is the One Central NG landing page.
+                    description: `This is the One Central NG website.
                         One Central is a product of Tishlabs Technologies. 
                         It is a fintech app that provides swift cash transactions.`,
                     technologies: "HTML CSS Javascript Bootstrap",
                     image: require("../assets/OneCentral.png"),
                     github: "https://github.com/HoodieDan/One-CentralNG-clone",
                     link: "https://www.onecentral.ng"
+                },
+                {
+                    name: "Portfolio Website",
+                    description: `This is my personal portfolio website developed by me.`,
+                    technologies: "HTML CSS Javascript Bootstrap Vue",
+                    image: require("../assets/portfolio.png"),
+                    github: "https://github.com/HoodieDan/portfolio",
+                    link: "https://hoodiedan.netlify.app"
                 },
                 {
                     name: "Google Keep Clone",
@@ -164,7 +177,9 @@ p {
     line-height: 1.5;
 }
 div.row {
+    position: relative;
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 div.project-technologies {
     padding-top: 20px;
@@ -179,6 +194,9 @@ div.container {
     position: relative;
     width: 90vw;
 }
+div.project-container {
+    height: fit-content;
+}
 div.photo-canvas {
     max-width: 50vw;
     position: relative;
@@ -190,12 +208,9 @@ div.project-content {
     position: relative;
     right: 30px;
 }
-div.row {
-    position: relative;
-}
 img {
     height: auto;
-    width: 100%;
+    width: 45vw;
     position: absolute;
     border-radius: 5px;
     filter: opacity(0.8) drop-shadow(0 0 0 #06ffc3);
@@ -232,6 +247,9 @@ div.project-description {
 }
 .col-sm-6 {
     margin-bottom: 20px;
+}
+.other-projects {
+    margin-top: 6rem;
 }
 .other {
     background-color: #112240;

@@ -13,8 +13,6 @@
     <!-- My introduction -->
     <Intro 
     :navIsOpen="navIsOpen"
-    :class="{ 'blur': navIsOpen }"
-    v-scroll-lock="navIsOpen"
     >
     </Intro>
 
@@ -24,28 +22,23 @@
     <!-- Little bit about myself -->
     <AboutMe 
     v-motion-slide-visible-once-bottom
-    :class="{ 'blur': navIsOpen }"
     >
     </AboutMe>
 
     <!-- Work Experience -->
     <Experience 
     v-motion-slide-visible-once-bottom
-    :class="{ 'blur': navIsOpen }"
     >
     </Experience>
 
     <!-- Things I have built -->
     <Work
-    :class="{ 'blur': navIsOpen }"
     v-motion-slide-visible-once-bottom
     >
     </Work>
 
     <!-- How to contact me -->
-    <div 
-    :class="{ 'blur': navIsOpen }"
-    >
+    <div>
       <Contact></Contact>
     </div>
   </body>
