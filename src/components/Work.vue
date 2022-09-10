@@ -84,7 +84,7 @@ export default {
                     technologies: "HTML CSS Javascript TailwindCSS Vue SCSS Firebase",
                     image: require("../assets/music.png"),
                     github: "https://github.com/HoodieDan/Drew-Music",
-                    link: "https://drew-music.netlify.app"
+                    link: "https://drew-music.vercel.app"
                 },
                 {
                     name: "Twitter Clone",
