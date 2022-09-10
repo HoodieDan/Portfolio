@@ -43,14 +43,14 @@
   <!-- mobile navigation  -->
   <div
     class="backdrop"
-    @wheel.self.prevent
-    @touchmove.self.prevent
-    @scroll.self.prevent
+    @wheel.prevent
+    @touchmove.prevent
+    @scroll.prevent
     @touch.self="toggleNav"
     @click.self="toggleNav"
     v-show="navIsOpen"
   >
-    <aside :class="{ 'leave-animation': navIsOpen === false, 'invisible': clicked === 0, }">
+    <aside :class="{ 'leave-animation': !navIsOpen, 'invisible': clicked === 0, }">
       <a class="navbar-link mono block light-slate" href="#AboutMe" @click="toggleNav"><span class="block green">01.</span>About</a>
       <a class="navbar-link mono block light-slate" href="#Experience" @click="toggleNav"><span class="block green">02.</span>Experience</a>
       <a class="navbar-link mono block light-slate" href="#Work" @click="toggleNav"><span class="block green">03.</span>Work</a>
@@ -115,7 +115,7 @@ div.backdrop {
     right: 0;
     bottom: 0;
     backdrop-filter: blur(5px);
-    transition: all 0.5s linear ease-out;
+    transition: display 0.5s;
     z-index: 10;
 }
 aside {
