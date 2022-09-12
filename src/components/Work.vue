@@ -185,7 +185,7 @@ div.project-technologies {
     padding-top: 20px;
 }
 div.project-technologies p {
-    font-weight: 300;
+    font-weight: 500;
     font-size: smaller;
 }
 div.container {
@@ -210,7 +210,7 @@ div.project-content {
 }
 img {
     height: auto;
-    width: 45vw;
+    width: 100%;
     position: absolute;
     border-radius: 5px;
     filter: opacity(0.8) drop-shadow(0 0 0 #06ffc3);
