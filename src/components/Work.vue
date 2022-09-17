@@ -134,7 +134,7 @@ export default {
                     link: "https://realest-estate.netlify.app/"
                 },
                 {
-                    name: "Tindog",
+                    name: "Dashboard",
                     description: `A dashboard with multiple analytics charts.`,
                     technologies: "HTML CSS Vue FusionCharts",
                     github: "https://github.com/HoodieDan/temi-dashboard",
