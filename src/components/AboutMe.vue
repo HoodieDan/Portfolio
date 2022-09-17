@@ -23,6 +23,7 @@
                             <li><i class="font-awesome fa-brands fa-python"></i> Python</li>
                             <li><i class="font-awesome fa-brands fa-react"></i> React.js</li>
                             <li><i class="font-awesome fa-brands fa-git-alt"></i> Git</li>
+                            <li><i class="font-awesome fa-brands fa-figma"></i> Figma</li>
                         </ul>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -31,6 +32,7 @@
                             <li><i class="font-awesome fa-brands fa-vuejs"></i> Vue.js</li>
                             <li><i class="font-awesome fa-brands fa-node-js"></i> Node.js</li>
                             <li><i class="font-awesome fa-brands fa-google"></i> Firebase</li>
+                            <li><i class="font-awesome fa-brands fa-js"></i> Typescript</li>
                         </ul>
                     </div>
                 </div>

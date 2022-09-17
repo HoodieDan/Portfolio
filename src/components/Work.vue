@@ -127,6 +127,20 @@ export default {
                     link: "https://hoodiedan.netlify.app"
                 },
                 {
+                    name: "Real Estate",
+                    description: `A real estate company website landing page.`,
+                    technologies: "HTML CSS Vue Swiper.js",
+                    github: "https://github.com/HoodieDan/Real-Estate",
+                    link: "https://realest-estate.netlify.app/"
+                },
+                {
+                    name: "Tindog",
+                    description: `A dashboard with multiple analytics charts.`,
+                    technologies: "HTML CSS Vue FusionCharts",
+                    github: "https://github.com/HoodieDan/temi-dashboard",
+                    link: "https://temi-dashboard.netlify.app/"
+                },
+                {
                     name: "Google Keep Clone",
                     description: "A simple Google Keep clone built with React and Firebase",
                     technologies: "React Firebase",
