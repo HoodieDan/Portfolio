@@ -4,12 +4,6 @@ const routes = [
     {
         path: '/',
         name: 'tishlabs',
-        component: () => import("../views/Tishlabs.vue"),
-    },
-    {
-        path: '/freelance',
-        name: 'freelance',
-        component: () => import("../views/Freelance.vue")
     },
 ]
 

@@ -5,15 +5,14 @@
             <hr class="light-slate">
             <p>
                 Hello! My name is Daniel and I enjoy creating things that live on the internet.
-                My interest in web development started back in 2020 when I decided to try recreating
-                a popular dating site but with a tweak — turns out hacking together a dating site for dogs taught
-                me a lot about HTML & CSS!
+                My interest in web development piqued back in 2019. I like to see myself as more
+                of  a problem solver than a programmer.
                 <br> <br>
                 Fast forward to today and I've had the priviledge of working at <span class="green">a startup</span>.
                 My main focus these days is building accessible, inclusive products and digital experiences at 
                 <a class="tishlabs" target="__blank" href="https://tishlabs.com.ng/"><span class="green">Tishlabs Technologies</span></a> for a variety of clients.
                 <br> <br>
-                Here are a few Technologies I have been working with recently:
+                Here are a few Technologies I am familiar with:
                 <br> <br>
             </p>
             <div class="row mono skills">
