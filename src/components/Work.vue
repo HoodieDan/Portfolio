@@ -77,7 +77,7 @@ export default {
             featuredProjects: [
                 {
                     name: "Drew Music",
-                    description: `This is a fullstack music player progressive web. It includes functions such as
+                    description: `This is a fullstack music player progressive web app. It includes functions such as
                     authentication, file uploads, playing of music and many more! The state management was
                     done with Vuex, testing (snapshot, e2e and unit) with Jest and Cypress, authentication
                     and storage with firebase and finally, form validation with Vee-Validate`,
