@@ -39,7 +39,7 @@ export default {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #0a192f;
+    background-color: #000;
     z-index: 1000;
   }
    .loader{
