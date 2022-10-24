@@ -69,7 +69,7 @@ h1:nth-of-type(2) {
   padding: 2% 0;
 }
 .btn {
-  background-color: #0a192f;
+  background-color: #000;
   border: #64ffda 1px solid;
   color: #64ffda;
   margin: 3px;
@@ -78,8 +78,7 @@ h1:nth-of-type(2) {
   animation: enter 1.5s cubic-bezier(0.645,0.045,0.355,1) forwards;
 }
 .btn:hover {
-  background-color: #64ffda;
-  color: #0a192f;
+  background-color: #191919;
 }
 @media (max-width: 1024px) {
   .cont {

@@ -98,7 +98,7 @@ export default {
   position: relative;
 }
 nav {
-  background-color: #0a192f;
+  background-color: #000;
   color: #64ffda;
   display: flex;
   justify-content: space-between;
@@ -127,7 +127,7 @@ aside {
   height: 100vh;
   right: 0;
   top: 0;
-  background-color: #112240;
+  background-color: #191919;
   color: #64ffda;
   text-align: center;
   transform: translateX(1000px);
@@ -137,12 +137,12 @@ aside {
   animation: show 0.5s linear forwards;
 }
 .aside-color {
-    background-color: #112240 !important;
+    background-color: #191919 !important;
     position: absolute;
 
 }
 aside button.btn {
-    background-color: #112240;
+    background-color: #191919;
     font-size: 17px;
     padding: 3% 10% !important;
 }
@@ -189,7 +189,7 @@ li {
   text-decoration: none;
 }
 button.navbar-toggle {
-  background-color: #0a192f;
+  background-color: #000;
   border-style: none;
   display: none;
   position: relative;
@@ -268,7 +268,7 @@ a.navbar-link:hover {
   transform: translateY(-22px);
 }
 button.btn {
-  background-color: #0a192f;
+  background-color: #000;
   border: #64ffda 1px solid;
   color: #64ffda;
   font-size: 0.9rem;
@@ -278,8 +278,7 @@ button.btn {
   transition: all 0.5s linear;
 }
 button.btn:hover {
-  background-color: #64ffda;
-  color: #0a192f;
+  background-color: #191919;
 }
 li:nth-of-type(1) {
   animation: enter 0.4s linear forwards;

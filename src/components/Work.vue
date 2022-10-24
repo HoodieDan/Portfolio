@@ -76,6 +76,17 @@ export default {
             mobile: false,
             featuredProjects: [
                 {
+                    name: "Tektalk",
+                    description: `This is a social network made for but not limited to Techies (Individuals involved in tech). 
+                    This is still a work in progress. So far, it has features such as sharing of images, commenting, posting,
+                    profile editing, following and many more.
+                    It was made using Vue and the state management was handled using Pinia.`,
+                    technologies: "HTML CSS Javascript Vue Bootstrap Pinia",
+                    image: require("../assets/Tektalk.png"),
+                    github: "https://github.com/HoodieDan/Tektalk",
+                    link: "https://tektalk.vercel.app/"
+                },
+                {
                     name: "Drew Music",
                     description: `This is a fullstack music player progressive web app. It has features such as
                     authentication, file uploads, playing of music and many more! The state management was
@@ -96,18 +107,18 @@ export default {
                     github: "https://github.com/HoodieDan/nuxtjs-twitter-clone",
                     link: "https://hoodietwitter.vercel.app"
                 },
+            ],
+            otherProjects: [
                 {
-                    name: "Pizza Website",
+                    name: "WowPizza",
                     description: `This is an E-Commerce website for buying pizza and
                         other snacks and desserts. It was made using Nuxt and the state management
                         was handled using Vuex.`,
                     technologies: "HTML CSS Javascript Nuxt",
                     image: require("../assets/pizza.png"),
-                    github: "https://github.com/HoodieDan/pizza-den",
-                    link: "https://pizza-app-web.netlify.app/"
-                }
-            ],
-            otherProjects: [
+                    github: "https://github.com/HoodieDan/Pizza-E-Commerce",
+                    link: "https://wow-pizza.netlify.app/"
+                },
                 {
                     name: "One Central NG",
                     description: `This is the One Central NG website.
@@ -247,7 +258,7 @@ div.project-description {
     z-index: 2;
     padding: 25px;
     border-radius: 4px;
-    background-color: #112240;
+    background-color: #191919;
     height: auto;
     width: 100%;
 }
@@ -266,7 +277,7 @@ div.project-description {
     margin-top: 6rem;
 }
 .other {
-    background-color: #112240;
+    background-color: #191919;
     padding: 5px 25px 15px 25px;
     cursor: pointer;
     height: 100%;
@@ -322,7 +333,7 @@ div.project-description {
     div.project-content {
         padding: 40px;
         /* filter: opacity(0.8) drop-shadow(0 0 0 #64ffda); */
-        background-color: rgba(17, 34, 64, 0.9);
+        background-color: #191919;
         background-blend-mode: multiply;
         text-align: left;
     }

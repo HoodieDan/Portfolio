@@ -76,7 +76,7 @@ div.font-awesome {
     font-size: 1.7rem;
 }
 .btn {
-  background-color: #0a192f;
+  background-color: #000;
   border: #64ffda 1px solid;
   color: #64ffda;
   font-size: 1rem;
@@ -84,8 +84,7 @@ div.font-awesome {
   transition: all 0.5s linear;
 }
 .btn:hover {
-  background-color: #64ffda;
-  color: #0a192f;
+  background-color: #191919;
 }
 p.smaller {
   font-size: 15px;
