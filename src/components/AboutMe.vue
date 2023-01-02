@@ -38,7 +38,7 @@
         </div>
         <div class="col-lg-5 col-md-5">
             <div class="image-container">
-                <img class="handsome" src="../assets/IMG_5879.jpeg" alt="my_picture">
+                <img class="handsome" src="../assets/handsome.jpeg" alt="my_picture">
             </div>
         </div>
     </div>
